@@ -39,7 +39,7 @@ public class LanzarMoneda {
                 contador++;
             }
         }
-        System.out.println("El número de caras es :" + contador);
+        System.out.println("El número de caras es : " + contador);
 
     }
     
@@ -52,20 +52,17 @@ public class LanzarMoneda {
             }
         }
         
-        System.out.println("El número de cruces es :" + contador);
+        System.out.println("El número de cruces es : " + contador);
     }
     
     public void resultado(){
         for(int i = 0; i < array.length; i++){
-            
-           for(int e = 1; i < array.length; i++){
-               if(array[i]){
-                System.out.println("El resultado " + e + " es cara");
-               }else{
-                   System.out.println("El resultado " + e + " es cruz");
-               }
-            } 
-        }
+           if(array[i]){
+            System.out.println("El resultado " + (i + 1) + " es cara");
+           }else{
+               System.out.println("El resultado " + (i + 1) + " es cruz");
+           }
+        }             
     }
     
     
