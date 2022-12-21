@@ -11,23 +11,37 @@ import java.util.ArrayList;
  * @author guerig
  */
 public class Cancion {
-
-    ArrayList <Integer> canciones;
-
-    public Cancion() {
-        canciones = new ArrayList<>();
+        ArrayList <String> canciones;
+        
+    // Método constructor    
+    public Cancion() {        
+        this.canciones = new ArrayList<>();
     }
     
-    public void numeroCanciones(){
-        canciones.size();
+    // Devuelve el número total de canciones
+    public int numeroCanciones(){
+        return canciones.size();
     }
     
-    public static boolean estaVacia(){
-        int total = this.canciones.size();
-        if(){
-            
+    // Devuelve true si la lista esta vacía 
+    public boolean estaVacia(){
+        if(canciones.size() == 0){
+            return true;
+        }else{
+            return false;
         }
     }
+    
+    // Se el pasa como parámetro el indice y devuelve la canción que se esta escuchando
+    public String escucharCancion(int cancion){
+        return canciones.get(cancion);
+    }
+    
+    public int cambiarCancion(int posicion, Cancion cancion){
+        
+    }
+    
+    
 
 
 
