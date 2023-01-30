@@ -12,7 +12,7 @@ import java.util.Objects;
  */
 
 // Para implementar Collections hay que añadir : implements Comparable<NombreClase>
-public class Pais implements Comparable<Pais> {
+public class Pais implements Comparable<Pais> { // Permite que la clase se ordene por nombre ya que se especifico en el override
     private String nombre;
     private long poblacion;
     private long superficie;
