@@ -21,24 +21,26 @@ public class NewClass {
         
         //casillasVecinas(0, 0, matriz);
         
-        List<Casilla> listaCasillas = casillasVecinas(2, 2, matriz);
+        List<Casilla> listaCasillas = casillasVecinas(0, 0, matriz);
         
+        System.out.println("Casillas vecinas: ");
         for(Casilla casilla : listaCasillas){
             System.out.println(casilla);
         }
         
-        System.out.println("Matriz: ");
-        mostrar(matriz);
+        System.out.println("Mostrar matriz: ");
+        mostrar(matriz); // Método mostrar
         System.out.println();
         
         
-        
+        System.out.println("Elemento diagonal principal:");
         List<Integer> diagonal = elementoDiagonalPrincipal(matriz); // Recomendado
         diagonal.forEach(System.out :: println);
         
         // IMPORTANTE
         // elementoDiagonalPrincipal(matriz).forEach(System.out :: println); // Se tiene que evitar, es una guarrada
         
+        System.out.println("Elemento diagonal secundario:");
         System.out.println(Arrays.toString(elementoDiagonalSecundaria(matriz)));
     }
     
@@ -66,6 +68,7 @@ public class NewClass {
         return array;
     }
     
+    // Método de las casillas
     public static List<Casilla> casillasVecinas(int fila, int columna, int[][] m){
         List<Casilla> lista = new ArrayList<>();
         
@@ -96,12 +99,14 @@ public class NewClass {
         return lista;
     }
     
+    // Si la fila es mayor que 0 y la fila es menor que el largo de la matriz
     public static boolean filaValida(int fila, int[][] matriz){
-        return fila >= 0&&fila<matriz.length;
+        return fila >= 0 && fila < matriz.length;
     }
     
+    // Si la columna es mayor que 0 y la columna es menor que el largo que la matriz
     public static boolean columnaValida(int columna, int[][] matriz){
-        return columna >= 0&&columna<matriz.length;
+        return columna >= 0 && columna < matriz.length;
     }
     
     

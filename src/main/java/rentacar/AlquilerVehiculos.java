@@ -13,21 +13,29 @@ import java.time.LocalDate;
 public class AlquilerVehiculos {
     public static void main(String[] args) {
         CatalogoVehiculos cv = new CatalogoVehiculos(5);
-        CatalogoClientes cc = new CatalogoClientes(5);
+        cv.anadirElemento(new Vehiculo());
+        cv.anadirElemento(new Vehiculo());
+        cv.anadirElemento(new Vehiculo());
+        cv.anadirElemento(new Vehiculo());
         
-        Cliente c = cc.buscarClientes("3");
-        System.out.println(c);
         
-        Vehiculo v = cv.buscarVehiculos("4");
-        System.out.println(v);
         
-        Alquileres a = new Alquileres(c, v, LocalDate.now(), 8);
-        System.out.println(a);
         
-        CatalogoAlquiler ca = new CatalogoAlquiler(10);
-        ca.anadirAlquiler(a);
-        System.out.println("Lista de alquileres: ");
-        System.out.println(ca);
+//        CatalogoClientes cc = new CatalogoClientes(5);
+//        
+//        Cliente c = cc.buscarClientes("3");
+//        System.out.println(c);
+//        
+//        Vehiculo v = cv.buscarVehiculos("4");
+//        System.out.println(v);
+//        
+//        Alquileres a = new Alquileres(c, v, LocalDate.now(), 8);
+//        System.out.println(a);
+//        
+//        CatalogoAlquiler ca = new CatalogoAlquiler(10);
+//        ca.anadirAlquiler(a);
+//        System.out.println("Lista de alquileres: ");
+//        System.out.println(ca);
         
     }
     

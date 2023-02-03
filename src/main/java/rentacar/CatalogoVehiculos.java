@@ -4,41 +4,31 @@
  */
 package rentacar;
 
-import java.util.Arrays;
-
 /**
  *
- * @author guerig
+ * @author ERICK
  */
-public class CatalogoVehiculos {
-
-    private int numeroVehiculos;
-    private Vehiculo[] listaVehiculos;
-    
-    
-    // El constructor recibe el tamaño del catálogo e
-    // inicializa la estructura de datos con vehiculos aleatorios
+// Crea la clase heredando de la clase Catalogo(extends)
+public class CatalogoVehiculos extends Catalogo<Vehiculo>{
+   
     public CatalogoVehiculos(int tamanio){
-        tamanio = Math.abs(tamanio);
+        super(tamanio); // Llama al constructor de la clase padre
         
-        this.numeroVehiculos = tamanio;
-        
-        // Generamos la estructura pero no tiene valores
-        this.listaVehiculos = new Vehiculo[tamanio]; // Nueva estructura para que me genere en memoria
-        
-        // Una vez creada la estructura de datos le doy valor a cada elemento
-        for(int i = 0; i < listaVehiculos.length; i++){
-            this.listaVehiculos[i] = new Vehiculo();
+        for(int i = 0; i < tamanio; i++){
+            this.anadirVehiculo(new Vehiculo());  
         }
+    }
+    
+    public Vehiculo buscarVehiculos(String bastidor) {
+        Vehiculo aux = new Vehiculo();
+        aux.setBastidor(bastidor);
+        int posicion = buscarVehiculo(aux);
         
+        return (posicion >= 0) ? this.lista.get(posicion) : null;
         
     }
     
-//    public void mostrarCatalogo(){
-//        for(Vehiculo v:listaVehiculos){
-//            System.out.println(v);
-//        }
-//    }
+    
     
     public String toString(){
         String tmp = "";
@@ -65,12 +55,7 @@ public class CatalogoVehiculos {
         }        
     }
     
-    public Vehiculo buscarVehiculos(String bastidor) {
-        Vehiculo aux = new Vehiculo();
-        aux.setBastidor(bastidor);
-        int posicion = buscarVehiculo(aux);
-        return (posicion >= 0) ? this.listaVehiculos[posicion] : null;
-    }  
+      
     
     
         
@@ -119,6 +104,11 @@ public class CatalogoVehiculos {
 //    public Vehiculo[] getListaVehiculos() {
 //        return listaVehiculos;
 //    }
+    
+    
+    
+}
+
     
     
     
