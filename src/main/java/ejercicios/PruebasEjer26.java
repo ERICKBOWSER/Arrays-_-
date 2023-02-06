@@ -13,11 +13,26 @@ import java.util.ArrayList;
 public class PruebasEjer26 {
     public static void main(String[] args) {
         
-        PilaEjer26<String> pila = new PilaEjer26();
+        PilaEjer26<String> pila = new PilaEjer26<>();
         
-        pila.crearLista();
+        pila.pushElemento("1");
+        pila.pushElemento("2");
+        pila.pushElemento("3");
+        pila.pushElemento("4");
+        
+        pila.pilaContenido();
         
         
-        
+    }
+}
+
+
+class Cancion{
+    private String nombre;
+    private String cantante;
+    
+    public Cancion(String nombre, String cantante){
+        this.nombre = nombre;
+        this.cantante = cantante;
     }
 }
